@@ -22,3 +22,5 @@ Stop Docker container by `docker stack rm jenkins`
 Remove secrets `docker secret rm jenkins-user` and `docker secret rm jenkins-pass`
 
 default login username admin password admin
+
+to login to the container user docker exec -u root -ti CONTAINER_NAME bash 
