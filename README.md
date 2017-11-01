@@ -20,3 +20,5 @@ Run the Jenkins container by `docker stack deploy -c jenkins.yml jenkins`
 Stop Docker container by `docker stack rm jenkins`
 
 Remove secrets `docker secret rm jenkins-user` and `docker secret rm jenkins-pass`
+
+default login username admin password admin
