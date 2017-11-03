@@ -10,6 +10,16 @@ services:
     secrets:
       - jenkins-user
       - jenkins-pass
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  app:
+    image: kevinkoolwhip/nodeapp
+    ports:
+      - 8081:8081
+    links:
+      - mongo
  
 secrets:
   jenkins-user:
