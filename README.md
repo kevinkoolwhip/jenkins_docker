@@ -1,6 +1,6 @@
 # jenkins_docker
 
-## Create Docker Image
+## Create Docker Image - Don't have to do this if you are running the applications
 Upload the proper jenkins config files to the repo. Then in the Dockerfile, add a commad to upload the config files to the proper location in the image.
 
 Build the Docker Image with `docker image build -t kevinkoolwhip/jenkins .`
@@ -13,6 +13,8 @@ If you do not have docker swarm running. Run `docker swarm init`
 Upload the username and password as a docker secret 
 
 `echo "admin" | docker secret create jenkins-user -` and `echo "admin" | docker secret create jenkins-pass -`
+
+Get the current docker images by `docker pull kevinkoolwhip/jenkins:latest` and `docker pull kevinkoolwhip/nodeapp`
 
 Run the Jenkins container by `docker stack deploy -c jenkins.yml jenkins`
 
