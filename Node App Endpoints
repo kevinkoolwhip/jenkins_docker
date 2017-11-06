@@ -1,0 +1,68 @@
+Create User
+
+POST /register HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8081
+Connection: close
+User-Agent: Paw/3.0.11 (Macintosh; OS X/10.12.0) GCDHTTPRequest
+Content-Length: 54
+
+{"username":"test1","name":"test1","password":"test1"}
+
+
+
+LOGIN - Will return a field called token. That is used to set the access token header x-access-token
+
+POST /authenticate HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8081
+Connection: close
+User-Agent: Paw/3.0.11 (Macintosh; OS X/10.12.0) GCDHTTPRequest
+Content-Length: 37
+
+{"username":"test","password":"test"}
+
+
+
+Create Item
+
+POST /api/item HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTUxMDAwMzYzOSwiZXhwIjoxNTEwMDkwMDM5fQ.P8CPee9h1DC1pe01iNVphmvS_cU6_CGq5yazxKonU9g
+Content-Type: application/json; charset=utf-8
+Host: localhost:8081
+Connection: close
+User-Agent: Paw/3.0.11 (Macintosh; OS X/10.12.0) GCDHTTPRequest
+Content-Length: 56
+
+{"name":"test","price":1,"quantity":2,"location":"test"}
+
+
+Get Items
+
+GET /api/item HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTUxMDAwMzYzOSwiZXhwIjoxNTEwMDkwMDM5fQ.P8CPee9h1DC1pe01iNVphmvS_cU6_CGq5yazxKonU9g
+Host: localhost:8081
+Connection: close
+User-Agent: Paw/3.0.11 (Macintosh; OS X/10.12.0) GCDHTTPRequest
+
+
+DELETE ITEM - the end url is the id that is retrived from Get item
+
+DELETE /api/item/5a00d4834c46f40001002e5b HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTUxMDAwMzYzOSwiZXhwIjoxNTEwMDkwMDM5fQ.P8CPee9h1DC1pe01iNVphmvS_cU6_CGq5yazxKonU9g
+Host: localhost:8081
+Connection: close
+User-Agent: Paw/3.0.11 (Macintosh; OS X/10.12.0) GCDHTTPRequest
+
+GET a single item
+
+GET /api/item/5a00d5da4c46f40001002e5c HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidGVzdCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTUxMDAwMzYzOSwiZXhwIjoxNTEwMDkwMDM5fQ.P8CPee9h1DC1pe01iNVphmvS_cU6_CGq5yazxKonU9g
+Host: localhost:8081
+Connection: close
+User-Agent: Paw/3.0.11 (Macintosh; OS X/10.12.0) GCDHTTPRequest
+
+
+
+
+

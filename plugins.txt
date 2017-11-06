@@ -2,6 +2,8 @@ ace-editor:latest
 ant:latest
 antisamy-markup-formatter:latest
 authentication-tokens:latest
+bitbucket:latest
+bitbucket-oauth:latest
 blueocean:1.0.0-b24 
 blueocean-autofavorite:latest
 blueocean-commons:1.0.0-b24 
