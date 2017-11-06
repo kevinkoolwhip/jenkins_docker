@@ -23,7 +23,7 @@ Run the Jenkins container by `docker stack deploy -c jenkins.yml jenkins`
 * At the jenkins dashboard, select new item on the left side.
 * Enter the item name, select freestyle project, and select OK
 * Under General, select GitHub Project and paste in the repo url `https://github.com/NorthForkInc/testautomation`
-* Under Source Code Management select Git. Paste the repo url and add your credentials. Branch should be demo
+* Under Source Code Management select Git. Paste the repo url and add your credentials. Branch should be `demo`
 * Under build select Invoke Gradle Script. Select gradle 3.2.1 as gradle version. Add your Gradle task which should be `run`
 * Save the project 
 
