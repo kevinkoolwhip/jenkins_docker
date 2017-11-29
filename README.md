@@ -35,3 +35,5 @@ Remove secrets `docker secret rm jenkins-user` and `docker secret rm jenkins-pas
 default login username admin password admin
 
 to login to the container user docker exec -u root -ti CONTAINER_NAME bash 
+
+`docker run -p 8080:8080 -p 50000:50000 --privileged -d -v /Users/work/jenkins_data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins kevinkoolwhip/jenkins`
